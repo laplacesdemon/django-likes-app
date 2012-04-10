@@ -2,9 +2,11 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes import generic
-from zuqqa_likes.managers import LikeManager
+from likes.managers import LikeManager
 
 class Like(models.Model):
+    unique_together = (("user", "object_id", "content_type"),)
+    
     objects = LikeManager()
     
     user = models.ForeignKey(User)

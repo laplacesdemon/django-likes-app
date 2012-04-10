@@ -1,5 +1,6 @@
 from django.conf.urls.defaults import *
 
-urlpatterns = patterns('zuqqa_likes.views',
-	(r'^create/$', 'create'), # create like
+urlpatterns = patterns('likes.views',
+    (r'^create/$', 'create'), # create like
+    (r'^remove/$', 'remove'),
 )

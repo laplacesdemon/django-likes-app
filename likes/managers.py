@@ -42,7 +42,7 @@ class LikeManager(models.Manager):
         useful method to create the like object without having the model instance
         content_type_pk is the primary key of the content type
         """
-        from zuqqa_likes.models import Like
+        from likes.models import Like
         ct = ContentType.objects.get(pk=content_type_pk)
         content_object = ct.get_object_for_this_type(id=object_id)
         like = Like(user=user, content_object=content_object)
@@ -53,6 +53,6 @@ class LikeManager(models.Manager):
         """
         removes the like of the given id
         """
-        from zuqqa_likes.models import Like
+        from likes.models import Like
         like = Like.objects.get(pk=like_id)
         like.delete()

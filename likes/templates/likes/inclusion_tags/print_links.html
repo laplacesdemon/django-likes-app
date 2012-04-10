@@ -1,0 +1,9 @@
+{% if like.id %}
+<a id="unlike-{{ like.id }}" class="ajaxify-post" href="{% url likes.views.remove %}" data="id={{ like.id }}" >
+        Unlike
+</a>
+{% else %}
+<a class="ajaxify-post" href="{% url likes.views.create %}" data="ct={{ obj.contenttype.id }}&id={{ obj.id }}" >
+        <img src="{{ STATIC_URL }}images/buton/begenbuton.png" alt="Like" />
+</a>
+{% endif %}

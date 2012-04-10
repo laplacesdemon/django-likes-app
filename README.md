@@ -33,6 +33,7 @@ get likes manually
     2
 
 get the user's likes
+    
     users_likes = Like.objects.for_user(user).order_by("-when")
     [<like1>,<like2>]
 

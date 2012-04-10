@@ -14,24 +14,27 @@ This app doesn't extend any other models in runtime (i.e. using add_to_class met
 Usage
 -----
 
-# sample objects, don't forget to include model classes
-user = User.objects.get(username="sample_user")
-story = Story.objects.get(name="sample_story") 
+sample objects, don't forget to include model classes
 
-# create and save a like object
-like = Like(user=user, content_object=story)
-like.save()
+    user = User.objects.get(username="sample_user")
+    story = Story.objects.get(name="sample_story") 
 
-# get likes manually
-likes = Like.objects.for_model(story).order_by("-when")
-[<like1>,<like2>]
+create and save a like object
+    
+    like = Like(user=user, content_object=story)
+    like.save()
 
-likes_count = Like.objects.count_for_model(story)
-2
+get likes manually
 
-# get the user's likes
-users_likes = Like.objects.for_user(user).order_by("-when")
-[<like1>,<like2>]
+    likes = Like.objects.for_model(story).order_by("-when")
+    [<like1>,<like2>]
 
-count = Like.objects.count_for_user(user)
-2
+    likes_count = Like.objects.count_for_model(story)
+    2
+
+get the user's likes
+    users_likes = Like.objects.for_user(user).order_by("-when")
+    [<like1>,<like2>]
+
+    count = Like.objects.count_for_user(user)
+    2

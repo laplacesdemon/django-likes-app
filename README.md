@@ -2,7 +2,7 @@
 Zuqqa Likes
 ===========
 
-# Iimportant: NOT production ready, I am still developing it
+# Important: I gave up on this app, Do NOT use it
 
 A Django app to have Facebook or Google+ style likes.
 You can attach "like" functionalty to any model you want and allow your users to like them.

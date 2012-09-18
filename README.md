@@ -1,5 +1,5 @@
 ===========
-Zuqqa Likes
+Django Likes
 ===========
 
 # Important: I gave up on this app, Do NOT use it
